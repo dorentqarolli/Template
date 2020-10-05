@@ -1,5 +1,7 @@
 <?php get_header();?>
 
-		print "Hello World";
+
+		echo "Hello World!";
+
 
 <?php get_footer();?>
