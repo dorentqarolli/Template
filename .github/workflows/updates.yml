@@ -28,7 +28,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
         # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
-        ftp-server: ftp://ftp.ilias.stedelijklyceumexpo.be:21/
+        ftp-server: ftp://ftp.ilias.stedelijklyceumexpo.be:21/test
         # FTP account username
         ftp-username: ilias
         # FTP account password
