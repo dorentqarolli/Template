@@ -28,7 +28,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
         # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
-        ftp-server: ftp.ilias.stedelijklyceumexpo.be:21/public_html/Nana-Gourmande/wp-content/themes/Template
+        ftp-server: ftp://ftp.ilias.stedelijklyceumexpo.be:21
         # FTP account username
         ftp-username: ilias
         # FTP account password
