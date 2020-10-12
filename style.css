@@ -2,3 +2,7 @@
 Theme Name: Test Theme
 Author: ilias
 */
+
+body {
+	background-color: black;
+}
