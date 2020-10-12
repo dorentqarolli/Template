@@ -6,14 +6,15 @@ name: CI
 # events but only for the main branch
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
+  # This workflow contains a single job called "deploy"
   deploy:
+    name: deploy to staging
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -23,17 +24,18 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: FTP Deploy
-          # You may pin to the exact commit or the version.
-          # uses: SamKirkland/FTP-Deploy-Action@da0d77ff390a13097c60f9b9eb954e503a480d97
-          uses: SamKirkland/FTP-Deploy-Action@3.1.1
-          with:
-            # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
-            ftp-server: ftp://ftp.ilias.stedelijklyceumexpo.be:21/test
-            # FTP account username
-            ftp-username: ilias
-            # FTP account password
-            ftp-password: Imane2012
-            # The local folder to copy, defaults to root project folder
-            local-dir: # optional, default is ./
-            # Passes through options into git-ftp
-            git-ftp-args: # optional
+        # You may pin to the exact commit or the version.
+        # uses: SamKirkland/FTP-Deploy-Action@da0d77ff390a13097c60f9b9eb954e503a480d97
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
+          ftp-server: ftp://ftp.ilias.stedelijklyceumexpo.be:21/public_html/Nana-Gourmande/wp-content/themes/Template
+          # FTP account username
+          ftp-username: ilias
+          # FTP account password
+          ftp-password: Imane2012
+          # The local folder to copy, defaults to root project folder
+          local-dir: 
+          # Passes through options into git-ftp
+          git-ftp-args: # optional
+
