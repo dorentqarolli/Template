@@ -26,7 +26,7 @@ add_action('wp_enqueue_scripts', 'load_stylesheets');
 
 
 
-function incude_jquery()
+function include_jquery()
 {
 
 	wp_deregister_script('jquery');
@@ -36,7 +36,7 @@ function incude_jquery()
 	add_action('wp_enqueue_scripts', 'jquery');
 
 }
-//add_action('wp_enqueue_scripts', 'include_jquery');
+add_action('wp_enqueue_scripts', 'include_jquery');
 
 
 
