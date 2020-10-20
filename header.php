@@ -20,6 +20,6 @@
 
 
 
-<header>
+<header class="sticky-top">
 
 </header>
