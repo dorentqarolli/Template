@@ -29,11 +29,11 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
           # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
-          ftp-server: ftp://ftp.ilias.stedelijklyceumexpo.be:21/public_html/Nana-Gourmande/wp-content/themes/Template
+          ftp-server: ftp://ftp.dorent.stedelijklyceumexpo.be:21/public_html/wp-content/themes/thema
           # FTP account username
-          ftp-username: ilias
+          ftp-username: dorent
           # FTP account password
-          ftp-password: Imane2012
+          ftp-password: Smartschool123.
           # The local folder to copy, defaults to root project folder
           local-dir: 
           # Passes through options into git-ftp
